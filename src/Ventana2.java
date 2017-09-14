@@ -28,7 +28,7 @@ public class Ventana2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        btninicio = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -36,7 +36,7 @@ public class Ventana2 extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnestudios = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -52,15 +52,15 @@ public class Ventana2 extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(620, 340));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 153, 255));
-        jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 10)); // NOI18N
-        jButton1.setText("INICIO");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btninicio.setBackground(new java.awt.Color(255, 153, 255));
+        btninicio.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 10)); // NOI18N
+        btninicio.setText("INICIO");
+        btninicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btninicioMouseClicked(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, -1, -1));
+        getContentPane().add(btninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 20)); // NOI18N
         jLabel1.setText("CURRICULUM VITAE");
@@ -82,7 +82,7 @@ public class Ventana2 extends javax.swing.JFrame {
         jLabel6.setText("jLabel6");
         jLabel6.setMaximumSize(new java.awt.Dimension(150, 164));
         jLabel6.setMinimumSize(new java.awt.Dimension(150, 164));
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 130, 150));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 140, 150));
 
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         jLabel7.setText("Edad:");
@@ -92,15 +92,15 @@ public class Ventana2 extends javax.swing.JFrame {
         jLabel8.setText("D.N.I.:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(255, 153, 255));
-        jButton2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 10)); // NOI18N
-        jButton2.setText("VER ESTUDIOS");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnestudios.setBackground(new java.awt.Color(255, 153, 255));
+        btnestudios.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 10)); // NOI18N
+        btnestudios.setText("VER ESTUDIOS");
+        btnestudios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                btnestudiosMouseClicked(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, -1, -1));
+        getContentPane().add(btnestudios, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         jLabel9.setText("Nacionalidad:");
@@ -140,20 +140,20 @@ public class Ventana2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void btninicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btninicioMouseClicked
         // TODO add your handling code here:
         Ventana1 v1 = new Ventana1();//se crea objeto Ventana1
         v1.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btninicioMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void btnestudiosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnestudiosMouseClicked
         // TODO add your handling code here:
         //Metodo que hace que aparezca y desaparezca la ventana presentacion 
-        Cv_Estudios v2 = new Cv_Estudios();//creo objeto ventana2
-        v2.setVisible(true);//hace que aparezca ventana2
-        dispose();//esconde la ventana de incio
-    }//GEN-LAST:event_jButton2MouseClicked
+        Cv_Estudios v2 = new Cv_Estudios();
+        v2.setVisible(true);
+        dispose();//esconde la ventana de Cv_Estudios
+    }//GEN-LAST:event_btnestudiosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -191,8 +191,8 @@ public class Ventana2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnestudios;
+    private javax.swing.JButton btninicio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

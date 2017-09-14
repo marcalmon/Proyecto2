@@ -34,6 +34,7 @@ public class Ventana1 extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         boton3 = new javax.swing.JButton();
         btncajero = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -90,9 +91,13 @@ public class Ventana1 extends javax.swing.JFrame {
         });
         getContentPane().add(btncajero, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 140, 30));
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/original.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 90, 100));
+
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\mariana\\Documents\\NetBeansProjects\\Proyecto2\\Proyecto2\\src\\Messier81--620x349.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 340));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -173,5 +178,6 @@ public class Ventana1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

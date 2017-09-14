@@ -15,6 +15,7 @@ public class Ventana3 extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(null);
+        imgjava.setVisible(false);
     }
 
     /**
@@ -29,8 +30,7 @@ public class Ventana3 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         boton1 = new javax.swing.JButton();
         btnsaludo = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        textnombre = new javax.swing.JTextField();
+        imgjava = new javax.swing.JLabel();
         btnborrar = new javax.swing.JButton();
         labelnom = new javax.swing.JLabel();
 
@@ -38,8 +38,8 @@ public class Ventana3 extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 3, 18)); // NOI18N
-        jLabel1.setText("Aplicación");
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 20)); // NOI18N
+        jLabel1.setText("APLICACIÓN");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 20, 130, -1));
 
         boton1.setBackground(new java.awt.Color(204, 0, 255));
@@ -57,32 +57,32 @@ public class Ventana3 extends javax.swing.JFrame {
         });
         getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 275, -1, -1));
 
-        btnsaludo.setText("Saludar!");
+        btnsaludo.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        btnsaludo.setText("Aparece!");
         btnsaludo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnsaludoMouseClicked(evt);
             }
         });
-        getContentPane().add(btnsaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
+        getContentPane().add(btnsaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 110, -1));
 
-        jLabel3.setFont(new java.awt.Font("Source Sans Pro Semibold", 0, 14)); // NOI18N
-        jLabel3.setText("Escriba su nombre");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
+        imgjava.setFont(new java.awt.Font("Source Sans Pro Semibold", 0, 14)); // NOI18N
+        imgjava.setIcon(new javax.swing.ImageIcon(getClass().getResource("/original.png"))); // NOI18N
+        getContentPane().add(imgjava, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 110, 100));
 
-        textnombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textnombreActionPerformed(evt);
-            }
-        });
-        getContentPane().add(textnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 150, -1));
-
-        btnborrar.setText("Borrar");
+        btnborrar.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        btnborrar.setText("Desaparece!");
         btnborrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnborrarMouseClicked(evt);
             }
         });
-        getContentPane().add(btnborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 70, -1));
+        btnborrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnborrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 110, -1));
 
         labelnom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/e0c43b770eeacaea5e9792ad7e5fdf72--wallpaper-colour-rosa-pastel1.png"))); // NOI18N
         labelnom.setText("jLabel2");
@@ -104,17 +104,17 @@ public class Ventana3 extends javax.swing.JFrame {
 
     private void btnsaludoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsaludoMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "¡Hola "+textnombre.getText()+"!");
+        imgjava.setVisible(true);
     }//GEN-LAST:event_btnsaludoMouseClicked
-
-    private void textnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textnombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textnombreActionPerformed
 
     private void btnborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnborrarMouseClicked
         // TODO add your handling code here:
-        textnombre.setText(null);        
+        imgjava.setVisible(false);        
     }//GEN-LAST:event_btnborrarMouseClicked
+
+    private void btnborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnborrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnborrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,9 +155,8 @@ public class Ventana3 extends javax.swing.JFrame {
     private javax.swing.JButton boton1;
     private javax.swing.JButton btnborrar;
     private javax.swing.JButton btnsaludo;
+    private javax.swing.JLabel imgjava;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel labelnom;
-    private javax.swing.JTextField textnombre;
     // End of variables declaration//GEN-END:variables
 }
