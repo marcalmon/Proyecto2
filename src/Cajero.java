@@ -38,11 +38,12 @@ public class Cajero extends javax.swing.JFrame {
         monto = new javax.swing.JTextField();
         debito = new javax.swing.JTextField();
         total = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btninicio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 204));
         setForeground(new java.awt.Color(0, 0, 204));
+        setUndecorated(true);
 
         btningresar.setBackground(new java.awt.Color(0, 204, 0));
         btningresar.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
@@ -83,7 +84,13 @@ public class Cajero extends javax.swing.JFrame {
 
         total.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
 
-        jButton1.setText("INICIO");
+        btninicio.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        btninicio.setText("INICIO");
+        btninicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btninicioMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,7 +104,7 @@ public class Cajero extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(btninicio))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -114,7 +121,7 @@ public class Cajero extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -129,7 +136,7 @@ public class Cajero extends javax.swing.JFrame {
                     .addComponent(btnsaldo)
                     .addComponent(total, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
-                .addComponent(jButton1)
+                .addComponent(btninicio)
                 .addContainerGap())
         );
 
@@ -167,6 +174,13 @@ public class Cajero extends javax.swing.JFrame {
         // TODO add your handling code here:
         total.setText(String.valueOf("$ " +acumulador));
     }//GEN-LAST:event_btnsaldoMouseClicked
+
+    private void btninicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btninicioMouseClicked
+        // TODO add your handling code here:
+        Ventana1 v1 = new Ventana1();//se crea objeto Ventana1
+        v1.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btninicioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -206,9 +220,9 @@ public class Cajero extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btndebitar;
     private javax.swing.JButton btningresar;
+    private javax.swing.JButton btninicio;
     private javax.swing.JButton btnsaldo;
     private javax.swing.JTextField debito;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField monto;
     private javax.swing.JLabel total;
